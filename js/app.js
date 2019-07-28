@@ -5,9 +5,10 @@ const moves = {
   "-1": "blue"
 }
 /*----- app's state (variables) -----*/
-let board
+let board, turn
 /*----- cached element references -----*/
 /*----- event listeners -----*/
+document.querySelector('section.container').addEventListener('click', handleClick)
 /*----- functions -----*/
 init();
 
@@ -17,5 +18,10 @@ function init(){
     [0,0,0],
     [0,0,0]
   ];
+  turn = 1;
 
+}
+
+function handleClick(e) {
+  console.log("getting hit");
 }
