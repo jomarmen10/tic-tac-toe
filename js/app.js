@@ -1,5 +1,5 @@
 /*----- constants -----*/
-const moves = {
+const MOVES = {
   "0": "white",
   "1": "red",
   "-1": "blue"
@@ -19,9 +19,12 @@ function init(){
     [0,0,0]
   ];
   turn = 1;
-
 }
 
+
+
 function handleClick(e) {
-  console.log("getting hit");
+  let tar = e.target
+  // console.dir(tar)
+  tar.style.backgroundColor = 'red'
 }
